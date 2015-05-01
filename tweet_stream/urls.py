@@ -4,6 +4,5 @@ from tweet_stream import views
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^/', include(admin.site.urls)),
-    url(r'^$', views.twitter_template, name='twitter_template')
+    url(r'^$/', views.twitter_template, name='twitter_template'),
 )
