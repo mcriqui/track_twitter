@@ -53,5 +53,5 @@ docs/_build/
 # PyBuilder
 target/
 
-track_twitter/local_settings.py
+local_settings.py
 db.sqlite3
