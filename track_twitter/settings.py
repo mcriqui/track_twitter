@@ -58,21 +58,21 @@ ROOT_URLCONF = 'track_twitter.urls'
 
 WSGI_APPLICATION = 'track_twitter.wsgi.application'
 
-# TEMPLATES = [
-#     {
-#         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-#         'DIRS': [],
-#         'APP_DIRS': True,
-#         'OPTIONS': {
-#             'context_processors': [
-#                 'django.template.context_processors.debug',
-#                 'django.template.context_processors.request',
-#                 'django.contrib.auth.context_processors.auth',
-#                 'django.contrib.messages.context_processors.messages',
-#             ],
-#         },
-#     },
-# ]
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
 
 
@@ -87,9 +87,9 @@ DATABASES = {
     }
 }
 
-TEMPLATE_DIRS = (
-    join(BASE_DIR, 'templates'),
-    )
+# TEMPLATE_DIRS = (
+#     join(BASE_DIR, 'templates'),
+#     )
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
